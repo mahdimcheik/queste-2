@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { User } from '../types';
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css',
 })
 export class UserProfileComponent {
+  random: string = 'random';
   user: User = {
     name: 'Doe',
     firstName: 'John',
@@ -20,5 +22,8 @@ export class UserProfileComponent {
   showContent(): void {
     console.log('triggered');
     this.mustShow = !this.mustShow;
+  }
+  handleChange(val: string) {
+    this.random = val;
   }
 }

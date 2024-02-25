@@ -5,4 +5,9 @@
   <button type="button" (click)="showContent()">
     {{ mustShow ? "Show" : "Hide" }}
   </button>
+  <div>one way binding</div>
+  <input type="text" #myInput (keyup)="handleChange(myInput.value)" />
+  <span>{{ random }}</span>
+  <div>two ways binding</div>
+  <input type="text" [(ngModel)]="user.firstName" />
 </div>
