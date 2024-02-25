@@ -1,0 +1,8 @@
+<div class="card-user">
+  <img [src]="user.photo" [alt]="user.name" />
+  <h2>{{ user.name }} {{ user.firstName }}</h2>
+  <div>{{ mustShow ? user.age + " years old" : "" }}</div>
+  <button type="button" (click)="showContent()">
+    {{ mustShow ? "Show" : "Hide" }}
+  </button>
+</div>
