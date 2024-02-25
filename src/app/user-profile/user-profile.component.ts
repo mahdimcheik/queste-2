@@ -10,7 +10,7 @@ import { User } from '../types';
   styleUrl: './user-profile.component.css',
 })
 export class UserProfileComponent {
-  random: string = 'random';
+  random: string = '';
   user: User = {
     name: 'Doe',
     firstName: 'John',
