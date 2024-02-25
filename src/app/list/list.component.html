@@ -1,0 +1,5 @@
+<div class="mylist">
+  @for (item of myList; track item.id) {
+  <h2 [ngClass]="$index % 2 == 0 ? 'red' : 'green'">{{ item.name }}</h2>
+  }
+</div>
