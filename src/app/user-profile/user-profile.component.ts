@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgClass, NgStyle } from '@angular/common';
 import { User } from '../types';
 
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, NgClass, NgStyle],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css',
 })

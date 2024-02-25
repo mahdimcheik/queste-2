@@ -9,5 +9,10 @@
   <input type="text" #myInput (keyup)="handleChange(myInput.value)" />
   <span>{{ random }}</span>
   <div>two ways binding</div>
-  <input type="text" [(ngModel)]="user.firstName" />
+  <input
+    type="text"
+    [(ngModel)]="user.firstName"
+    [ngClass]="mustShow ? 'border-red' : 'border-green'"
+    [ngStyle]="{ 'background-color': 'red' }"
+  />
 </div>
