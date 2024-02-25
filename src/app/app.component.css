@@ -1,0 +1,20 @@
+.app {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.app app-block {
+  position: absolute;
+}
+.app .top-right {
+  right: 25px;
+}
+
+.app .bottom-right {
+  right: 25px;
+  bottom: 25px;
+}
+.app .bottom-left {
+  bottom: 25px;
+}
