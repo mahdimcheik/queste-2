@@ -1,0 +1,65 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <div>
+    Form submitted ? {{ myForm["valid"] }} Form valid ?
+    {{ myForm["valid"] }} Form invalid ? {{ myForm["valid"] }}
+  </div>
+  <fieldset>
+    <label for="title-order">Title</label>
+    <input
+      id="title-order"
+      name="title-order"
+      type="text"
+      #title="ngModel"
+      [(ngModel)]="model.title"
+      required
+      minlength="5"
+    />
+  </fieldset>
+  @if(title.errors?.['minlength']){
+  <div>title error</div>
+  }@if(title.valid){
+  <div>title valid</div>
+  }
+
+  <fieldset>
+    <label for="quantity-order">Quantité</label>
+    <input
+      id="quantity-order"
+      name="quantity-order"
+      [(ngModel)]="model.quantity"
+      type="number"
+      required
+    />
+  </fieldset>
+
+  <fieldset>
+    <label for="date-order">Date de commande</label>
+    <input
+      id="date-order"
+      name="date-order"
+      [(ngModel)]="model.date"
+      type="date"
+      required
+    />
+  </fieldset>
+
+  <fieldset>
+    <label for="contact-order">Contact</label>
+    <input
+      id="contact-order"
+      name="contact-order"
+      [(ngModel)]="model.contact"
+      type="email"
+      required
+      email
+    />
+  </fieldset>
+
+  <button type="reset">Restaurer</button>
+  <button type="submit">Sauvegarder</button>
+</form>
+@if(myForm['valid']){
+<div>my form is valid</div>
+}@else {
+<div>my form is not valid</div>
+}
